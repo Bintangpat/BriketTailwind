@@ -1,0 +1,544 @@
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+
+  <!--===========================Mulai Ges================================-->
+
+  <body class="bg-white font-inter text-black">
+    <!--===========================Mulai Ges================================-->
+    <!-- Navbar -->
+    <div class="z-20 w-screen bg-white"></div>
+    <nav
+      class="sticky top-0 z-20 flex w-screen items-center justify-between bg-white p-6 shadow-lg transition ease-in-out"
+    >
+      <div class="flex items-center space-x-4">
+        <div class="h-4 w-4 rounded-full bg-black"></div>
+        <a class="text-sm text-black" href="#" id="brand" data-target="About"
+          >Brand</a
+        >
+        <a class="text-sm text-black" href="#" id="produk" data-target="Product"
+          >Product</a
+        >
+        <a class="text-sm text-black" href="#" id="contact" data-target="">
+          Contact us</a
+        >
+      </div>
+      <div class="flex items-center space-x-4">
+        <img
+          src="./component/location.svg"
+          alt="Location Icon"
+          class="h-5 w-5"
+        />
+        <img
+          src="./component/bag-2.svg"
+          alt="Shopping Cart Icon"
+          class="h-5 w-5"
+        />
+        <div class="language flex flex-row">
+          <select
+            class="hidden cursor-pointer text-black md:block"
+            id="language-select"
+          >
+            <option class="cursor-pointer" value="">Language Select</option>
+            <option class="cursor-pointer" value="id">Bahasa Indonesia</option>
+            <option class="cursor-pointer" value="en">English Language</option>
+            <option class="cursor-pointer" value="ar">اللغة العربية</option>
+          </select>
+          <div class="relative inline-block text-left md:hidden">
+            <div>
+              <button
+                id=""
+                class="inline-flex w-full rounded-md bg-white text-white hover:shadow-xl"
+              >
+                <img
+                  id="dropdownMenuButton"
+                  src="./component/translate-svgrepo-com.svg"
+                  class="h-5 w-5"
+                  alt=""
+                />
+              </button>
+            </div>
+
+            <div
+              id="dropdownMenu"
+              class="absolute right-0 z-10 mt-2 hidden w-56 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+            >
+              <div
+                class="py-1"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <button
+                  class="dropdown-item block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
+                  data-value="id"
+                >
+                  Bahasa Indonesia
+                </button>
+                <button
+                  class="dropdown-item block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
+                  data-value="en"
+                >
+                  English Language
+                </button>
+                <button
+                  class="dropdown-item block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
+                  data-value="ar"
+                >
+                  اللغة العربية
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script src="./navigasi.js"></script>
+    <script src="./dropdown.js"></script>
+    <!--===========================Wrapper================================-->
+
+    <!--===========================Slider=================================-->
+    <div
+      id="Carousel"
+      class="relative flex w-screen cursor-pointer items-center justify-center overflow-hidden md:h-80vh"
+    >
+      <div id="wrapperslider" class="relative h-full w-full">
+        <div
+          id="slider1"
+          class="slide animate-fadeInleft"
+          data-carousel-item="0"
+        >
+          <img
+            src="./component/Photoslider1.jpg"
+            alt="Deskripsi gambar 1"
+            class="h-full w-full object-cover"
+          />
+          <div class="deskripsi absolute inset-x-16 bottom-12 text-white">
+            <h5
+              class="text-left text-2xl font-bold tablet:text-3xl laptopl:text-4xl"
+              id="textslider_0"
+            >
+              Eco-Friendly Briquettes
+            </h5>
+            <p>loren</p>
+          </div>
+        </div>
+
+        <div id="slider2" class="slide hidden" data-carousel-item="1">
+          <img
+            src="./component/Photoslider2.jpg"
+            alt="Deskripsi gambar 2"
+            class="h-full w-full object-cover"
+          />
+          <div class="deskripsi absolute inset-x-16 bottom-12 text-white">
+            <h5
+              class="text-left text-2xl font-bold tablet:text-3xl laptopl:text-4xl"
+              id="textslider_1"
+            >
+              Minimal Combustion Smoke
+            </h5>
+            <p>loren</p>
+          </div>
+        </div>
+
+        <div
+          id="slider3"
+          class="slide hidden animate-fadeInright"
+          data-carousel-item="2"
+        >
+          <img
+            src="./component/Photoslider3.jpg"
+            alt="Deskripsi gambar 3"
+            class="h-full w-full object-cover"
+          />
+          <div class="deskripsi absolute inset-x-16 bottom-12 text-white">
+            <h5
+              class="text-left text-2xl font-bold tablet:text-3xl laptopl:text-4xl"
+              id="textslider_2"
+            >
+              Lasts up to 4 hours
+            </h5>
+            <p>loren</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="wrapperbutton"
+        class="absolute bottom-0 left-1/2 flex w-screen -translate-x-1/2 transform"
+      >
+        <button
+          id="button1"
+          class="carousel-button h-2 w-full transform bg-white opacity-50 transition duration-700 ease-in hover:opacity-100"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          id="button2"
+          class="carousel-button h-2 w-full transform bg-white opacity-50 transition duration-700 ease-in hover:opacity-100"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          id="button3"
+          class="carousel-button h-2 w-full transform bg-white opacity-50 transition duration-700 ease-in hover:opacity-100"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+      </div>
+
+      <div
+        id="btnnextprevcarousel"
+        class="absolute bottom-4 top-1/2 flex h-fit w-full -translate-y-1/2 transform flex-row justify-between p-6"
+      >
+        <button
+          id="btnprevcarousel"
+          aria-label="Previous Slide"
+          class="text-white"
+          data-carousel-prev
+        >
+          <img src="./component/arrow-left.svg" alt="Previous" />
+        </button>
+        <button
+          id="btnnextcarousel"
+          aria-label="Next Slide"
+          class="text-white"
+          data-carousel-next
+        >
+          <img src="./component/arrow-right.svg" alt="Next" />
+        </button>
+      </div>
+
+      <div
+        class="absolute left-15% top-1/2 -translate-x-0 -translate-y-0 transform tablet:left-1/2 tablet:top-1/2 tablet:-translate-x-1/2 tablet:-translate-y-1/2"
+        id="buttonmid"
+      >
+        <button
+          class="rounded-sm bg-toggle-on text-sm font-bold text-white transition duration-300 ease-in-out hover:bg-toggle-hover mobiles:h-8 mobiles:w-16 tablet:h-12 tablet:w-32 laptopl:h-20 laptopl:w-36 laptopl:text-2xl"
+        >
+          Get now
+        </button>
+      </div>
+    </div>
+
+    <script src="./carousel.js"></script>
+    <!--===========================G maps API=================================-->
+    <div class="flex w-full flex-col items-center justify-center">
+      <p class="text-center text-2xl">G Maps</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1817.246748061895!2d105.03995662526178!3d-5.374485714471072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40d2a9a9e25c4b%3A0xadfcb17e838234ae!2sUniversitas%20Aisyah%20Pringsewu!5e0!3m2!1sid!2sid!4v1735700453544!5m2!1sid!2sid"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <!--===========================Main content=================================-->
+
+    <section
+      class="container mx-auto flex flex-col justify-items-center gap-24 px-12 py-8 md:gap-24 xxl:px-96"
+    >
+      <section id="About" class="flex flex-col gap-20">
+        <div
+          id="About"
+          class="flex flex-col items-center justify-between gap-10 md:flex-row"
+        >
+          <img
+            alt="Glowing briquettes in a container"
+            class="h-72 w-72 object-cover xxl:h-100 xxl:w-100"
+            height="300"
+            src="./component/PhotoBurn.jpeg"
+            width="300"
+          />
+          <h1
+            id="header1"
+            class="mt-4 w-full text-center text-6xl font-bold md:mt-0 md:text-left tablet:text-7xl"
+          >
+            Feel The Heat, Save The Earth
+          </h1>
+        </div>
+        <div
+          class="mt-5 flex flex-col items-center justify-between gap-10 md:flex-row"
+        >
+          <div class="w-96 flex-col">
+            <h2
+              id="header2"
+              class="text-center text-3xl font-bold md:text-left xxl:text-4xl"
+            >
+              About us
+            </h2>
+            <p
+              id="subheader2"
+              class="r mt-4 text-justify text-gray-700 md:text-left xxl:text-3xl"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <img
+            alt="Glowing briquettes in a container"
+            class="h-64 w-64 object-cover xxl:h-100 xxl:w-100"
+            height="300"
+            src="./component/Burning Coal.jpeg"
+            width="300"
+          />
+        </div>
+      </section>
+      <!--=====================================Product=======================================-->
+      <section class=" flex flex-wrap gap-10" id="product display">
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+        <img
+          class="h-64 w-64 object-cover"
+          src="./component/freepik__candid-image-photography-natural-textures-highly-r__19542.jpeg"
+          alt=""
+        />
+      </section>
+
+      <section id="Product">
+        <div class="m- flex flex-wrap justify-between gap-5">
+          <div
+            class="group h-80 w-52 transform rounded-md bg-white p-2 transition duration-500 hover:scale-110 hover:shadow-md"
+          >
+            <div class="h-32 w-full">
+              <img
+                alt="Product image of briquettes"
+                class="h-32 w-full rounded-md object-cover"
+                height="150"
+                src="./component/Produk2.jpg"
+                width="150"
+              />
+            </div>
+            <div class="">
+              <p
+                id="produk1"
+                class="mt-3 text-center text-xl font-semibold tablet:text-left"
+              >
+                Nama produk
+              </p>
+              <p id="deskripsi1" class="text-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div id="buttonproduk" class="my-3">
+              <button
+                id="buttonproduct4"
+                class="h-8 w-20 rounded-md bg-yellow-300 font-semibold text-black group-hover:bg-yellow-400"
+              >
+                12$
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group h-80 w-52 transform rounded-md bg-white p-2 transition duration-500 hover:scale-110 hover:shadow-md"
+          >
+            <div class="h-32 w-full">
+              <img
+                alt="Product image of briquettes"
+                class="h-32 w-full rounded-md object-cover"
+                height="150"
+                src="./component/Produk2.jpg"
+                width="150"
+              />
+            </div>
+            <div class="">
+              <p
+                id="produk2"
+                class="mt-3 text-center text-xl font-semibold tablet:text-left"
+              >
+                Nama produk
+              </p>
+              <p id="deskripsi2" class="text-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+
+            <div id="buttonproduk" class="my-3">
+              <button
+                id="buttonproduct4"
+                class="h-8 w-20 rounded-md bg-yellow-300 font-semibold text-black group-hover:bg-yellow-400"
+              >
+                12$
+              </button>
+            </div>
+          </div>
+          <div
+            class="group h-80 w-52 transform rounded-md bg-white p-2 transition duration-500 hover:scale-110 hover:shadow-md"
+          >
+            <div class="h-32 w-full">
+              <img
+                alt="Product image of briquettes"
+                class="h-32 w-full rounded-md object-cover"
+                height="150"
+                src="./component/Produk2.jpg"
+                width="150"
+              />
+            </div>
+            <div class="">
+              <p
+                id="produk3"
+                class="mt-3 text-center text-xl font-semibold tablet:text-left"
+              >
+                Nama produk
+              </p>
+              <p id="deskripsi3" class="text-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div id="buttonproduk" class="my-3">
+              <button
+                id="buttonproduct4"
+                class="h-8 w-20 rounded-md bg-yellow-300 font-semibold text-black group-hover:bg-yellow-400"
+              >
+                12$
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group h-80 w-52 transform rounded-md bg-white p-2 transition duration-500 hover:scale-110 hover:shadow-md"
+          >
+            <div class="h-32 w-full">
+              <img
+                alt="Product image of briquettes"
+                class="h-32 w-full rounded-md object-cover"
+                height="150"
+                src="./component/Produk2.jpg"
+                width="150"
+              />
+            </div>
+            <div class="">
+              <p
+                id="produk4"
+                class="mt-3 text-center text-xl font-semibold tablet:text-left"
+              >
+                Nama produk
+              </p>
+              <p id="deskripsi4" class="text-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div id="buttonproduk" class="my-3">
+              <button
+                id="buttonproduct4"
+                class="h-8 w-20 rounded-md bg-yellow-300 font-semibold text-black group-hover:bg-yellow-400"
+              >
+                12$
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group h-80 w-52 transform rounded-md bg-white p-2 transition duration-500 hover:scale-110 hover:shadow-md"
+          >
+            <div class="h-32 w-full">
+              <img
+                alt="Product image of briquettes"
+                class="h-32 w-full rounded-md object-cover"
+                height="150"
+                src="./component/Produk2.jpg"
+                width="150"
+              />
+            </div>
+            <div class="">
+              <p
+                id="produk4"
+                class="mt-3 text-center text-xl font-semibold tablet:text-left"
+              >
+                Nama produk
+              </p>
+              <p id="deskripsi4" class="text-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div id="buttonproduk" class="my-3">
+              <button
+                id="buttonproduct4"
+                class="h-8 w-20 rounded-md bg-yellow-300 font-semibold text-black group-hover:bg-yellow-400"
+              >
+                12$
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!--===========================Footer=================================-->
+
+    <div class="mt-8 w-full bg-gray-100 p-4">
+      <div class="text-center">
+        <h3 id="footer1" class="r text-xl font-bold">
+          “Burn Sustainably with Our Selections of Eco-Friendly Briquettes”
+        </h3>
+        <p class="r mt-4 text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
