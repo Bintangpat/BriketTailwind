@@ -14,6 +14,8 @@ const translations = {
     produk2: "Nama Produk 2",
     produk3: "Nama Produk 3",
     produk4: "Nama Produk 4",
+    produk5: "Nama Produk 5",
+    produk6: "Nama Produk 6",
     footer1:
       "Bakar Secara Berkelanjutan dengan Pilihan Briket Ramah Lingkungan Kami",
     subfooter2: "",
@@ -32,6 +34,8 @@ const translations = {
     produk2: "Product Name 2",
     produk3: "Product Name 3",
     produk4: "Product Name 4",
+    produk5: "Product Name 5",
+    produk6: "Product Name 6",
     footer1: "Burn Sustainably with Our Selections of Eco-Friendly Briquettes",
     subfooter2: "",
   },
@@ -49,6 +53,8 @@ const translations = {
     produk2: "اسم المنتج 2",
     produk3: "اسم المنتج 3",
     produk4: "اسم المنتج 4",
+    produk5: "اسم المنتج 5",
+    produk6: "اسم المنتج 6",
     footer1: "احرق بشكل مستدام مع اختياراتنا من البريكات الصديقة للبيئة",
     subfooter2: "",
   },
@@ -72,6 +78,8 @@ const elementsToTranslate = [
   { id: "produk2", key: "produk2" },
   { id: "produk3", key: "produk3" },
   { id: "produk4", key: "produk4" },
+  { id: "produk5", key: "produk5" },
+  { id: "produk6", key: "produk6" },
   { id: "footer1", key: "footer1" },
   { id: "subfooter2", key: "subfooter2" },
   // Tambahkan elemen lain yang ingin diterjemahkan di sini
@@ -88,8 +96,6 @@ languageSelect.addEventListener("change", function () {
       // Jika tidak ada bahasa yang dipilih (opsi netral), atur teks ke kunci default
       if (!selectedLanguage) {
         element.textContent = en; // Atau Anda bisa mengatur ke nilai default lain jika diinginkan
-      } else {
-        element.textContent = translations[selectedLanguage][key];
       }
     }
   });

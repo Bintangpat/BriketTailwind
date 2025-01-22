@@ -26,6 +26,7 @@ module.exports = {
         "100vh": "100vh",
         "90vh": "90vh",
         "80vh": "80vh",
+        "85vh": "89vh",
         "60vh": "60vh",
         "50vh": "50vh",
         "40vh": "40vh",
@@ -36,11 +37,12 @@ module.exports = {
       },
       boxShadow: {
         sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-        DEFAULT:
+        default:
           "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
         md: "0 0px 15px -1px rgba(0, 0, 0, 0.1), 0 2px 4px 0px rgba(0, 0, 0, 0.06)",
         lg: "0 0px 15px 3px rgba(0, 0, 0, 0.1), 0 4px 6px 2px rgba(0, 0, 0, 0.05)",
         xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        fotter: "0 0px 15px 3px rgba(0, 0, 0, 0.1)",
       },
       inset: {
         "10%": "10%",
@@ -62,28 +64,36 @@ module.exports = {
         "3%": "3%",
       },
       animation: {
-        fadeInright: "fadeInright 0.7s ease-in forwards",
-        fadeInleft: "fadeInleft 0.7s ease-in forwards",
+        fadeIn: "fade 0.7s ease-out ",
+        fadeOut: "fade 0.7s ease-in ",
+        up: "up 0.7s ease-out ",
+      },
+      zIndex: {
+        1: "1",
+        2: "2",
+        3: "3",
+        4: "4",
+        5: "5",
+        10: "10",
       },
       keyframes: {
-        fadeInleft: {
-          "0%": {
+        up: {
+          from: {
+            transform: "translate3d(0, 100%, 0)",
             opacity: "0",
-            transform: "translateX(-30px)", // Perbaiki penulisan translateX
           },
-          "100%": {
+          to: {
+            transform: "translate3d(0, 0, 0)",
             opacity: "1",
-            transform: "translateX(0)", // Perbaiki penulisan translateX
           },
         },
-        fadeInright: {
-          "0%": {
-            opacity: "0",
-            transform: "translateX(30px)", // Perbaiki penulisan translateX
+
+        fade: {
+          "50%": {
+            opacity: "0.5",
           },
           "100%": {
             opacity: "1",
-            transform: "translateX(0)", // Perbaiki penulisan translateX
           },
         },
       },
